@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <!-- Background gradient: soft warm beige -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf9f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5f0eb;stop-opacity:1" />
+    </linearGradient>
+    <!-- Card gradient: soft white with warm tint -->
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fdfcfb;stop-opacity:1" />
+    </linearGradient>
+    <!-- Shadow filter for card -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#c8b8a8" flood-opacity="0.15"/>
+    </filter>
+    <!-- Subtle glow for heart -->
+    <filter id="heartGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#80808018" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle floating circles decoration -->
+  <circle cx="100" cy="100" r="180" fill="#e8d5c4" opacity="0.15"/>
+  <circle cx="1100" cy="530" r="220" fill="#d4c5b8" opacity="0.12"/>
+  <circle cx="1050" cy="80" r="100" fill="#e0cfc0" opacity="0.10"/>
+  <circle cx="150" cy="560" r="120" fill="#ddd0c5" opacity="0.10"/>
+
+  <!-- Card -->
+  <rect x="280" y="80" width="640" height="470" rx="16" ry="16"
+        fill="url(#card)" filter="url(#cardShadow)"
+        stroke="#e8e0d8" stroke-width="1"/>
+
+  <!-- Grid pattern inside card -->
+  <rect x="280" y="80" width="640" height="470" rx="16" ry="16"
+        fill="url(#grid)" opacity="0.6"/>
+
+  <!-- Delicate corner flourishes -->
+  <g opacity="0.3" stroke="#c8b0a0" stroke-width="0.8" fill="none">
+    <!-- Top-left -->
+    <path d="M 310 110 Q 295 110 295 125"/>
+    <path d="M 320 110 L 295 110 L 295 130"/>
+    <!-- Top-right -->
+    <path d="M 890 110 Q 905 110 905 125"/>
+    <path d="M 880 110 L 905 110 L 905 130"/>
+    <!-- Bottom-left -->
+    <path d="M 310 520 Q 295 520 295 505"/>
+    <path d="M 320 520 L 295 520 L 295 500"/>
+    <!-- Bottom-right -->
+    <path d="M 890 520 Q 905 520 905 505"/>
+    <path d="M 880 520 L 905 520 L 905 500"/>
+  </g>
+
+  <!-- Top label -->
+  <text x="600" y="175" text-anchor="middle"
+        font-family="Georgia, 'Malgun Gothic', serif"
+        font-size="11" fill="#b0a090" letter-spacing="5">
+    MESSAGE FOR
+  </text>
+
+  <!-- Thin line above name -->
+  <line x1="500" y1="195" x2="700" y2="195" stroke="#ddd0c4" stroke-width="0.8"/>
+
+  <!-- Main name -->
+  <text x="600" y="260" text-anchor="middle"
+        font-family="'Apple SD Gothic Neo', 'Malgun Gothic', 'Nanum Myeongjo', Georgia, serif"
+        font-size="62" font-weight="300" fill="#3d3530" letter-spacing="8">
+    지은
+  </text>
+
+  <!-- Thin line below name -->
+  <line x1="500" y1="285" x2="700" y2="285" stroke="#ddd0c4" stroke-width="0.8"/>
+
+  <!-- Heart icon (SVG path) -->
+  <g transform="translate(588, 305)" filter="url(#heartGlow)">
+    <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402
+             C1 3.759 3.8 2 6.5 2c1.741 0 3.441.737 5.5 2.587
+             C14.059 2.737 15.759 2 17.5 2 20.2 2 23 3.759 23 7.191
+             c0 4.105-5.37 8.863-11 14.402z"
+          fill="none" stroke="#c8a898" stroke-width="1" opacity="0.7"/>
+  </g>
+
+  <!-- Divider -->
+  <line x1="540" y1="355" x2="660" y2="355" stroke="#e0d0c8" stroke-width="0.8"/>
+
+  <!-- Sender info -->
+  <text x="600" y="400" text-anchor="middle"
+        font-family="'Apple SD Gothic Neo', 'Malgun Gothic', Georgia, serif"
+        font-size="15" fill="#9a8a80" letter-spacing="1">
+    최준화 님이 편지를 보냈습니다
+  </text>
+
+  <!-- Click prompt -->
+  <text x="600" y="500" text-anchor="middle"
+        font-family="Georgia, 'Malgun Gothic', serif"
+        font-size="10" fill="#c0b0a8" letter-spacing="4">
+    CLICK TO READ
+  </text>
+
+  <!-- Tiny dots decoration -->
+  <circle cx="600" cy="470" r="2" fill="#d0c0b8" opacity="0.5"/>
+  <circle cx="588" cy="470" r="1.5" fill="#d0c0b8" opacity="0.3"/>
+  <circle cx="612" cy="470" r="1.5" fill="#d0c0b8" opacity="0.3"/>
+</svg>
