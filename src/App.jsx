@@ -1,7 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Heart, X } from 'lucide-react';
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (isOpen) {
+      audio.play().catch(() => {});
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  }, [isOpen]);
+
   return (
     <div className="min-h-screen bg-stone-50 flex items-center justify-center p-4 font-sans text-stone-900">
       <div className="max-w-lg w-full perspective-1000">
@@ -61,6 +74,7 @@ const App = () => {
           </div>
         </div>
       </div>
+      <audio ref={audioRef} src="/music/1.mp4" loop />
       <style dangerouslySetInnerHTML={{ __html: `
         .perspective-1000 { perspective: 1000px; }
         .preserve-3d { transform-style: preserve-3d; }
