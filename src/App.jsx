@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Heart, X } from 'lucide-react';
-
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-stone-50 flex items-center justify-center p-4 font-sans text-stone-900">
       <div className="max-w-lg w-full perspective-1000">
@@ -22,7 +20,6 @@ const App = () => {
             </div>
             <p className="absolute bottom-12 text-stone-400 text-xs tracking-widest uppercase">Click to read</p>
           </div>
-
           {/* Card Inside */}
           <div className="absolute inset-0 backface-hidden rotate-y-180 bg-white rounded-lg shadow-xl border border-stone-100 flex flex-col overflow-hidden">
             <div className="flex-1 p-8 md:p-12 overflow-y-auto custom-scrollbar bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
@@ -32,7 +29,7 @@ const App = () => {
               </div>
               <div className="space-y-6 text-stone-700 leading-relaxed text-[15px] font-light">
                 <p>
-                  지은아, 우리가 함께 시간을 보낸 지도 벌써 꽤 흘렀네. 평소에 장난치며 게임하던 순간들이 사실은 나에게 얼마나 큰 의미였는지, 문득 진지하게 전하고 싶어졌어. 세상이라는 복잡한 아레나에서 수많은 사람과 일들이 스쳐 지나가지만, 내 시선은 언제나 너를 향해 있어. 마치 <strong>'최상급 조준경 부착'</strong> 증강을 얻은 것처럼, 멀리 떨어져 있을 때도 네가 어떤 마음일지 가장 먼저 선명하게 보이고, 내 모든 초점이 오직 너에게만 맞춰지는 기분이야.
+                  지은아, 우리가 함께 시간을 보낸 지도 벌써 꽤 흘렀네. 평소에 장난치며 일상을 나누던 순간들이 사실은 나에게 얼마나 큰 의미였는지, 문득 진지하게 전하고 싶어졌어. 수많은 사람들 속에서도 내 시선은 언제나 너를 향해 머물고, 네가 어떤 표정을 짓고 어떤 마음일지 가장 먼저 살피게 돼. 너라는 존재가 내 세상의 중심이 되어버린 것처럼, 내 모든 초점과 관심이 오직 너에게만 맞춰지는 기분이야.
                 </p>
                 <p>
                   누군가에게 내 본래의 모습을 보여주는 건 언제나 어려운 일이었어. 하지만 너와 있으면 신기하게도 내 모든 방어 기제가 무력해지더라. 마치 <strong>'취약'</strong> 상태에 걸린 것처럼, 네가 건네는 짧은 인사나 다정한 눈빛에 내 마음의 장벽은 너무나 쉽게 허물어지곤 해. 그런데 그게 전혀 위태롭게 느껴지지 않는 건, 네가 그만큼 단단한 신뢰를 주는 사람이기 때문일 거야.
@@ -64,7 +61,6 @@ const App = () => {
           </div>
         </div>
       </div>
-
       <style dangerouslySetInnerHTML={{ __html: `
         .perspective-1000 { perspective: 1000px; }
         .preserve-3d { transform-style: preserve-3d; }
@@ -84,5 +80,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
