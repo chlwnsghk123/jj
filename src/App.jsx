@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Heart, X } from 'lucide-react';
-
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-stone-50 flex items-center justify-center p-4 font-sans text-stone-900">
       <div className="max-w-lg w-full perspective-1000">
@@ -22,7 +20,6 @@ const App = () => {
             </div>
             <p className="absolute bottom-12 text-stone-400 text-xs tracking-widest uppercase">Click to read</p>
           </div>
-
           {/* Card Inside */}
           <div className="absolute inset-0 backface-hidden rotate-y-180 bg-white rounded-lg shadow-xl border border-stone-100 flex flex-col overflow-hidden">
             <div className="flex-1 p-8 md:p-12 overflow-y-auto custom-scrollbar bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
@@ -64,7 +61,6 @@ const App = () => {
           </div>
         </div>
       </div>
-
       <style dangerouslySetInnerHTML={{ __html: `
         .perspective-1000 { perspective: 1000px; }
         .preserve-3d { transform-style: preserve-3d; }
@@ -84,5 +80,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
